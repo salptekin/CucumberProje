@@ -1,0 +1,46 @@
+package day30_collections;
+
+import java.util.HashSet;
+import java.util.TreeSet;
+
+public class TreeSet01 {
+
+	public static void main(String[] args) {
+		//To create TreeSet
+		TreeSet<String> treeSet = new TreeSet<String>();
+		
+		//To add elements
+		treeSet.add("B");
+		treeSet.add("A");
+		treeSet.add("D");
+		treeSet.add("C");
+		System.out.println(treeSet);//[A, B, C, D]
+		
+		//How to sort elements in a HashSet ?
+		//By Converting HashSet to TreeSet.
+		//How do you convert HashSet to TreeSet?
+		
+		HashSet<Integer> hashSet = new HashSet<Integer>();	
+		//To add elements to HashSet
+		hashSet.add(3);
+		hashSet.add(1);
+		hashSet.add(4);
+		hashSet.add(2);
+		System.out.println(hashSet); 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

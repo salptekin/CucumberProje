@@ -1,0 +1,14 @@
+package day17_static_arrays;
+
+public class ArrayQuestion03 {
+
+	public static void main(String[] args) {
+		/*
+		 * Given an array of int, return true if 6 appears as 
+		 * either the first or last element in the array. 
+		 * The array will be length 1 or more.
+		 */
+
+	}
+
+}

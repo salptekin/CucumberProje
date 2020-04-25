@@ -1,0 +1,19 @@
+package lambda;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class Lambda17 {
+
+	public static void main(String[] args) throws IOException {
+		// How to work with Files by using Lambda
+		
+		//1)Print the file on the console
+		Files.lines(Paths.get("src/FileForLambda01")).forEach(System.out::println);
+		
+		//2)Get a specific word from the file
+		Files.lines(Paths.get("src/FileForLambda01")).map(t->t.toUpperCase()).forEach(System.out::println);
+	}
+
+}

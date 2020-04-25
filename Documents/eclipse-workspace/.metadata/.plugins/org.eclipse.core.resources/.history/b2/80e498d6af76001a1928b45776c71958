@@ -1,0 +1,18 @@
+package day30_collections;
+
+import java.util.HashMap;
+
+public class HasMap01 {
+
+	public static void main(String[] args) {
+		// Create a HashMap. All maps use <Key, Value>
+		HashMap<Integer,String> hashMap = new HashMap<Integer, String>();
+		hashMap.put(1, "A");
+		hashMap.put(30, "C");
+		hashMap.put(2, "B");
+		hashMap.put(5, "E");
+		System.out.println(hashMap);//{1=A, 2=B, 3=C, 5=E}
+
+	}
+
+}

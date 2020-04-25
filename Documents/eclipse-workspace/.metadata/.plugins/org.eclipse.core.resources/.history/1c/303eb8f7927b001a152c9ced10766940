@@ -1,0 +1,36 @@
+package lambda2020;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Lambda05 {
+
+	public static void main(String[] args) {
+		
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(13);
+		list.add(10);
+		list.add(14);
+		list.add(5);
+		list.add(7);
+		list.add(3);
+		list.add(5);
+		list.add(13);
+		list.add(16);
+		
+		System.out.println(sumOfElements(list));
+	}
+	
+	//Use Functional Code 
+	//Find the sum of all elements by using Type 2
+	public static int sum(int a, int b) {
+		return a+b;
+	}
+	
+	public static int sumOfElements(List<Integer> list) {
+		return list.stream()
+		           .reduce(5, Lambda05::sum); // You will get a number which is sum of all elements
+	}
+	
+
+}

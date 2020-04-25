@@ -1,0 +1,13 @@
+package day17_static_arrays;
+
+public class ArrayQuestion03 {
+
+	public static void main(String[] args) {
+		/*
+		 * Type a program to check whether all elements of two Arrays
+		 * are same or not
+		 */
+
+	}
+
+}

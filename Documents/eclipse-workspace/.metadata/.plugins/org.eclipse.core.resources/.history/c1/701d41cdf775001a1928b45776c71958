@@ -1,0 +1,20 @@
+package day29_collections;
+
+import java.util.Hashtable;
+
+public class HashTable01 {
+
+	public static void main(String[] args) {
+		
+		   Hashtable<Integer,String> hashTable = new Hashtable<>();
+		 
+		   hashTable.put(1000, "Mark");
+//		   hashTable.put(1001,"Angie");
+//		   hashTable.put(1002,"John");
+	       System.out.println(hashTable);
+	       
+	       
+
+	}
+
+}

@@ -1,0 +1,34 @@
+package lambda;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.function.IntFunction;
+import java.util.function.IntPredicate;
+import java.util.function.IntUnaryOperator;
+
+public class LambdaExercisesFor1112 {
+
+	public static void main(String[] args) {
+		//1) Use IntPredicate to print on the console all odd integers in the given array
+		//2) Use IntFunction to print on the console all odd integers in the given array
+		int arr[] = {12, 9, 13, 4, 6, 2, 4, 12, 15};
+		oddsInArray(arr);
+		squared(arr);
+	}
+	
+	//1) IntPredicate
+	public static void oddsInArray(int arr[]) {
+		IntPredicate intPredicate = x-> x%2==1;
+		Arrays.stream(arr)
+		      .filter(intPredicate)
+		      .forEach(System.out::println);		
+	}
+	
+	//2) IntFunction
+		public static void squared(int arr[]) {
+			IntUnaryOperator intFunction = x-> x*x;
+			       Arrays.stream(arr)
+			             .map(intFunction)
+			             .forEach(System.out::print);			      		
+		}
+}

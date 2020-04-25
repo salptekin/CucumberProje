@@ -1,0 +1,48 @@
+package lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+
+public class Lambda10 {
+
+	public static void main(String[] args) {
+		// Print the squares of even numbers on the console by using "Functional" programming
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(12);
+		list.add(9);
+		list.add(13);
+		list.add(4);
+		list.add(6);
+		list.add(2);
+		list.add(4);
+		list.add(12);
+		list.add(15);
+		
+		Predicate<Integer> isEvenPredicate = x -> x%2==0; // If a method returns "boolean" and uses just 1 argument
+		                                                  // it is implementing "Predicate" functional Interface
+		
+		Function<Integer, Integer> squareFunction = t->t*t; // If a method returns a value different from boolean and uses just 1 argument
+                                                            // it is implementing "Function" functional Interface
+		
+		Consumer<Integer> sysoutConsumer = System.out::println; // If a method returns void and uses just 1 argument
+                                                                // it is implementing "Consumer" functional Interface
+		
+		list.stream()                                                              
+	        .filter(isEvenPredicate)  
+	        .map(squareFunction)      
+	        .forEach(sysoutConsumer);
+		
+		BinaryOperator<Integer> sumBinaryOperator = Integer::sum;
+		
+		int sum =list.stream()
+                     .reduce(0,sumBinaryOperator);
+		System.out.println("Sum: " + sum);
+            
+
+	}
+	
+}

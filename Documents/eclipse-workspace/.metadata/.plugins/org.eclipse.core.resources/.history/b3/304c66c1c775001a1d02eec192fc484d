@@ -1,0 +1,25 @@
+package day29_collections;
+
+import java.util.HashMap;
+import java.util.Iterator;
+
+public class HashMap01 {
+
+	public static void main(String[] args) {
+		
+		 HashMap<Integer,String> stud = new HashMap<Integer,String>();
+	       stud.put(100, "Anjali"); //adding key value pairs
+	       stud.put(101, "Anu");
+	       stud.put(102, "Banu");
+	       System.out.println(stud); // Prints the list of key,value pairs
+	       
+	       Iterator<Integer> it = stud.iterator();      //printing using Iterator
+	 
+	       while(it.hasNext()) 
+	       {   Integer key = it.next();
+	           System.out.println("Key:"+key+"\t"+"value:"+stud.get(key));
+	       }
+
+	}
+
+}

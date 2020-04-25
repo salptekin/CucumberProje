@@ -1,0 +1,12 @@
+package day17_static_arrays;
+
+public class ArrayQuestion06 {
+
+	public static void main(String[] args) {
+		/*
+		 * Reverse an array
+		 */
+
+	}
+
+}

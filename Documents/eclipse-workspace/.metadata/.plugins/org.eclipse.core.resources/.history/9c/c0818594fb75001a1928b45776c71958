@@ -1,0 +1,39 @@
+package day29_collections;
+
+public class TreeMap02 {
+
+	public static void main(String[] args) {
+		
+		
+		   // remove(Object key) removes the key-value pair for the specified key
+	       hashMap.remove(101);
+	       System.out.println("After using remove(): " + hashMap);
+	       
+	       //get(Object key) returns the value for the specified key.
+	       System.out.println(hashMap.get(102)); // Banu
+	       
+	       //containsKey(Object key): It is a boolean function which returns true or false 
+	       //based on whether the specified key is found in the map.
+	       System.out.println(hashMap.containsKey(100)); // true
+	       System.out.println(hashMap.containsKey(101)); // false
+	       
+	       //isEmpty() is a boolean function which returns true or false 
+	       //It checks whether the map is empty. 
+	       System.out.println(hashMap.isEmpty()); // false
+	       
+	       //keySet()returns the Set of the keys fetched from the map.
+	       System.out.println(hashMap.keySet()); //[100, 102]
+	       
+	       //values()returns a collection of values of map.
+	       System.out.println(hashMap.values()); //[Mark, Banu]
+	       
+	       //size() Returns the size of the map
+	       System.out.println(hashMap.size());// 2
+	       
+	       // clear() removes all the key and value pairs from the specified Map.
+	       hashMap.clear();
+	       System.out.println(hashMap); //{}
+
+	}
+
+}

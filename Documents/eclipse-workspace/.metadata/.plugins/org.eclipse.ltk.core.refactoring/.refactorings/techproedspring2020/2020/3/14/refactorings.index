@@ -1,0 +1,12 @@
+1585663540167	Rename local variable 'list'
+1585666356463	Rename local variable 'list1'
+1585666997526	Rename local variable 'listIterator1'
+1585667010645	Rename local variable 'listIterator'
+1585670406784	Rename local variable 'list2'
+1585670541038	Rename type 'ListIterator'
+1585671996992	Rename type 'ListIteratorMethods'
+1585695235530	Delete element
+1585695243166	Delete element
+1585695250943	Delete element
+1585695261638	Delete element
+1585699007656	Rename package 'collections'

@@ -1,0 +1,14 @@
+package lambda;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class Lambda17 {
+
+	public static void main(String[] args) throws IOException {
+		// How to work with Files by using Lambda
+		Files.lines(Paths.get("techproedspring2020/src/FileForLambda01")).forEach(System.out::println);
+	}
+
+}

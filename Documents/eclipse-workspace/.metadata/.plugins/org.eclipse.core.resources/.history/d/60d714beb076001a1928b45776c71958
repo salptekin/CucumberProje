@@ -1,0 +1,24 @@
+package day30_collections;
+
+import java.util.HashMap;
+
+public class HasMap01 {
+
+	public static void main(String[] args) {
+		// Create a HashMap. All maps use <Key, Value>
+		HashMap<Integer,String> hashMap = new HashMap<Integer, String>();
+		hashMap.put(1, "A");
+		hashMap.put(3, "C");
+		hashMap.put(2, "B");
+		hashMap.put(5, "E");
+		System.out.println(hashMap);//{1=A, 2=B, 3=C, 5=E}
+		//If you use same key more than once, Java will accept the last one
+		//No compile time error, no run time error for same keys.
+		hashMap.put(1, "X");
+		System.out.println(hashMap);//{1=X, 2=B, 3=C, 5=E}
+		hashMap.put(6,"X");
+		System.out.println(hashMap);//{1=X, 2=B, 3=C, 5=E, 6=X}
+
+	}
+
+}

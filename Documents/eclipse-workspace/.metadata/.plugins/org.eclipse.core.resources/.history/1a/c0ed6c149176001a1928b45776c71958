@@ -1,0 +1,23 @@
+package day30_collections;
+
+import java.util.HashSet;
+
+public class HashSet01 {
+
+	public static void main(String[] args) {
+		//To create HashSet
+		HashSet<String> hashSet = new HashSet<String>();	
+		//To add elements to HashSet
+		hashSet.add("A");
+		hashSet.add("B");
+		hashSet.add("C");
+		System.out.println(hashSet); //[A, B, C]
+		
+		//Try to duplicate
+		hashSet.add("A");
+		hashSet.add("A");
+		System.out.println(hashSet);
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package day30_collections;
+
+import java.util.LinkedList;
+
+public class LinkedList01 {
+
+	public static void main(String[] args) {
+		
+		//Create a linked list
+		LinkedList<String> list = new LinkedList<String>();
+		
+		//To add elements
+		list.add("Mark");
+		list.add("Amanda");
+		list.add("John");
+		System.out.println(list);
+
+	}
+
+}

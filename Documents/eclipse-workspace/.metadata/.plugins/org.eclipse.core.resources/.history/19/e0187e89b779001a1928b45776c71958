@@ -1,0 +1,14 @@
+package lambda;
+
+import java.util.function.BiPredicate;
+
+public class Lambda12 {
+
+	public static void main(String[] args) {
+		// BiPredicate: Predicate accepts just one argument and returns boolean, BiPredicate accepts two arguments and returns boolean
+		BiPredicate<Integer, Integer> biPredicate = (t,u) -> { return t==u*u;}; // If you use more than one argument, parenthesis is mandatory
+		System.out.println(biPredicate.test(9, 3));
+
+	}
+
+}

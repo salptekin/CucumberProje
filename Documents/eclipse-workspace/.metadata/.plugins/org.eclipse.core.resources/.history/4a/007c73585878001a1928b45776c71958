@@ -1,0 +1,11 @@
+package lambda;
+
+public class LambdaExercises {
+
+	public static void main(String[] args) {
+		//Exercise 1: Print all odd numbers from the list []
+		//
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package day29_collections;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMap01 {
+
+	public static void main(String[] args) {
+		
+		  //This is how to declare TreeMap 
+	      TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>();
+
+	      //put() adds elements to TreeMap
+	      treeMap.put(1, "Data1");
+	      treeMap.put(43, "Data2");
+	      treeMap.put(35, "Data3");
+
+	      /* Display content using Iterator*/
+	      Iterator iterator = treeMap.entrySet().iterator();
+	      while(iterator.hasNext()) {
+	         Map.Entry mapEntry = (Map.Entry)iterator.next();
+	         System.out.println("key is: "+ mapEntry.getKey() + " Value is: " + mapEntry.getValue());
+	      }
+
+	}
+
+}

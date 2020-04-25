@@ -1,0 +1,30 @@
+package day29_collections;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMap01 {
+
+	public static void main(String[] args) {
+		
+		  //This is how to declare TreeMap 
+	      TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>();
+
+	      //put() adds elements to TreeMap
+	      treeMap.put(1, "Mark");
+//	      treeMap.put(43, "Amanda");
+//	      treeMap.put(35, "John");
+	      System.out.println(treeMap);
+
+	      // Display content using Iterator
+	      Iterator iterator = treeMap.entrySet().iterator();
+	      while(iterator.hasNext()) {
+	    	 // Map.Entry interface in Java provides certain methods to access the entry in the Map. 
+	    	 // By gaining access to the entry of the Map we can easily manipulate them. 
+	    	 // Map.Entry is a generic and is defined in the java.util package. 
+	         Map.Entry mapEntry = (Map.Entry)iterator.next();
+	         System.out.println("Key:"+ mapEntry.getKey() + " Value:" + mapEntry.getValue());
+	      }
+	}
+}

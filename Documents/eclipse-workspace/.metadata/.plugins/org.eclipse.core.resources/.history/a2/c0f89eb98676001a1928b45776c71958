@@ -1,0 +1,81 @@
+package day30_collections;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class LinkedList01 {
+
+	public static void main(String[] args) {
+		
+		//Create a linked list
+		LinkedList<String> list = new LinkedList<String>();
+		
+		//To add elements
+		list.add("Mark");
+		list.add("Amanda");
+		list.add("John");
+		list.add("Ann");
+		list.add("Pamela");
+		System.out.println(list);//[Mark, Amanda, John, Ann, Pamela]
+		
+		//To remove first element you can use remove(0) or removeFirst()
+		list.removeFirst();
+		System.out.println(list);//[Amanda, John, Ann, Pamela]
+		
+		//To remove last element 
+		list.removeLast();
+		System.out.println(list); //[Amanda, John, Ann]
+		
+		//To remove any element use index with remove method
+		list.remove(1);
+		System.out.println(list);//[Amanda, Ann]
+		
+		//To add an element to beginning of the linked list
+		list.addFirst("Ali");
+		System.out.println(list);//[Ali, Amanda, Ann]
+		
+		//To add an element to the last of the linked list
+		list.addLast("Can");
+		System.out.println(list);//[Ali, Amanda, Ann, Can]
+		
+		//To add an element to a specific index
+		list.add(2, "Walter");
+		System.out.println(list);//[Ali, Amanda, Walter, Ann, Can]
+		
+		//To use "iterator" for linked list
+		Iterator<String> itr = list.iterator();		
+		while(itr.hasNext()) {
+			System.out.print(itr.next() + " - ");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

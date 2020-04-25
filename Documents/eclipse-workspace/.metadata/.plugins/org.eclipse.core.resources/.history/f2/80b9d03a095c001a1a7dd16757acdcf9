@@ -1,0 +1,14 @@
+package day17_static_arrays;
+
+public class ArrayQuestion08 {
+
+	public static void main(String[] args) {
+		/* 
+          Given an array of int, return the sum of the first 2 elements in the array. 
+          If the array length is less than 2, just sum up the elements that exist, 
+          returning 0 if the length of the array is 0.
+		 */
+
+	}
+
+}

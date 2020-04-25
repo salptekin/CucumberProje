@@ -1,0 +1,37 @@
+package lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Lambda01 {
+
+	public static void main(String[] args) {
+		
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(12);
+		list.add(9);
+		list.add(13);
+		list.add(4);
+		list.add(6);
+		list.add(2);
+		list.add(4);
+		list.add(12);
+		list.add(15);
+		
+		// Difference between "Structured" and "Functional" programming.
+		
+		//Print all elements on the console by using "Structured" programming
+		
+		printElementsInListByStructured(list);
+		
+
+	}
+	
+	public static void printElementsInListByStructured(List<Integer> numbers) {
+		
+		for(int w: numbers) {
+			System.out.print(w + " ");
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+package day17_static_arrays;
+
+public class ArrayQuestion04 {
+
+	public static void main(String[] args) {
+		/*
+		 * Type a program like;
+		 * Ask user to enter the size of the Array
+		 * Ask user to enter all elements of the Array
+		 * Print all the elements which have even index of the Array on the console 
+		 */
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package day30_collections;
+
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class Queue02 {
+
+	public static void main(String[] args) {
+		// Create two Queue's by using LinkedList and Priority Queue
+		LinkedList<String> que1 = new LinkedList<String>();
+		que1.add("A");
+		que1.add("C");
+		que1.add("B");
+		System.out.println(que1);//[A, C, B]
+		
+		Queue<String> que2 = new PriorityQueue<String>();
+		que2.add("Ali");
+		que2.add("Deniz");
+		que2.add("Bilal");
+		System.out.println(que2);//[A, B, C]
+
+	}
+
+}

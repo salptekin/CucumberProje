@@ -1,0 +1,12 @@
+package day17_static_arrays;
+
+public class ArrayQuestion07 {
+
+	public static void main(String[] args) {
+		/*
+		 * Given an array of int length 3, return the sum of all the elements.
+		 */
+
+	}
+
+}
