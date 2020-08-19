@@ -1,0 +1,118 @@
+			API 1. Ders Tekrar
+
+1)API: Application Programming Interface
+2)API'larda UI (User Interface) yoktur
+3)API'lar bir application'in baska bir application ile iletisim kurmasini saglar
+4)Bu iletisimi kurarken "Client" dan "Request"'i alir, "request" uygun ise "Datatbase/Server" a ulastirir ve Server'dan aldigi "Response"'i "Client"'a ulastirir.
+5)API bir "Middle Man" dir.
+6)API Tester'lar API'in istenen fonksiyonlari, istenen sekilde, istenen surede
+yerine getirip getirmedigini kontrol eder.
+7)     ......./booking ==> Endpoint(URL)
+       ......./booking/3 ==> Endpoint(URL)
+Biz tester olarak calismaya basladigimizda bize API'in tum Endpoint'lerini  ve bu Endpoint'lerden ne beklendigini gosterecekler, siz bu beklentileri test edeceksiniz.
+8)API'in sahip oldugu tum Endpoint'leri ve bu Endpoint'lerden beklentileri gosteren dokumanlar var. En meshuru "SWAGGER" dir. Bu yuzden "SWAGGER" dokuman'dan aldigim direktiflere gore test yaparim.
+9)Endpoint'ler ve Swagger dokumani API Developer'lar tarafindan hazirlanir.
+10)GET ==> Server'dan data'yi ceker (Select gibi)
+   POST ==> Yeni bir data olusturmaya yarar (Insert into gibi)
+   PUT ==> Varolan data'yi update etmeye yarar (Update set gibi)
+   PATCH ==> Varolan data'yi kismi update etmeye yarar (Update set gibi)
+   DELETE ==> Varolan data'yi silmeye yarar (Delete from gibi)
+
+11) API Develeoper'lar hangi method icin Authorization gerekir demislerse
+    o methodu kullanirken Authorization'i eklemek gerekir.
+
+    GET icin; sadece Endpoint (URL) lazim 
+    POST icin; 1)Endpoint
+               2)"raw" secili degilse secin
+               3)"JSON" format kullaniyorsaniz dropdown menuden "JSON" secili olmali 
+               4)Request Body
+    PUT icin;  1)Endpoint
+               2)"raw" secili degilse secin
+               3)"JSON" format kullaniyorsaniz dropdown menuden "JSON" secili olmali 
+               4)Request Body'nin tamami        
+    PATCH icin;1)Endpoint
+               2)"raw" secili degilse secin
+               3)"JSON" format kullaniyorsaniz dropdown menuden "JSON" secili olmali 
+               4)Request Body'nin degistirilmek istenen kismi lazim 
+    DELETE icin; sadece Endpoint (URL) lazim  
+
+12) JSON formatinda verilen data icinden istedigimiz data'yi cekmek icin asagidaki kurallar kulanilir:
+	a) "$" ==> Tum data'yi verir
+	b) "." ==> Iceri girmek icin kullanilir
+	c) "[2]" ==> Index'i 2 olan data'yi verir
+	d) "[*]" ==> Tum indexlere gore data'yi veirir
+	e) "[2, 5]" ==> Index'i 2 ve 5 olan data'lari verir
+	f) "[-1]" ==> Son elemani verir
+
+	Alistirma yapmak icin https://jsonpath.herokuapp.com/ kullanilabilir
+
+
+13)Iki cesit parametre var: a)Query(Request) Param    
+								i)"?" Endpoint'in bittigi anlamina gelir
+								ii)"?" den sonra key-value yapisi kullanilir
+								iii)Datalari filtrelemek icin Query Param kullanilir
+								iv)Query Param'lar API Developer'lar tarafindan olusturulur.
+
+                           b)Path Param
+                                i)"/" kullanilir
+                                ii)Ustunde calistigimiz data resource'unu daraltmaya yarar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
