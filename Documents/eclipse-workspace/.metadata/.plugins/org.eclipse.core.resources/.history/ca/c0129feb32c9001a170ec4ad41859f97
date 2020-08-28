@@ -1,0 +1,22 @@
+package day29dequemapsnt;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class M02 {
+	
+	//Methods of HashMap
+
+	public static void main(String[] args) {
+
+		Map<Integer, String> hMap = new HashMap<>();
+		hMap.put(100, "Ali Can");
+		hMap.put(101, "Veli Han");
+		hMap.put(102, "Ayse Tan");
+		hMap.put(104, "Emine Ran");
+		
+		System.out.println(hMap);
+		
+	}
+
+}

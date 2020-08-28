@@ -1,0 +1,56 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+import io.restassured.response.Response;
+
+public class ObjectMapperWithMap extends TestBase {
+	
+
+	@Test
+	public void jsonToJava() {
+		
+		Response response = given().
+                				spec(spec01).
+                				when(). 
+                				get("/booking/3");
+
+        response.prettyPrint();
+ 
+        //How to convert json to Map
+        Map<String, Object> jsonToMap = JsonUtil.convertJsonToJava(response.asString(), Map.class);
+        System.out.println(jsonToMap);
+        
+        Map<String, Object> mapBookingDates = new HashMap<>();
+        mapBookingDates.put("checkin", "2018-04-14");
+        mapBookingDates.put("checkout", "2019-01-28");
+        
+        Map<String, Object> mapBooking = new HashMap<>();
+        mapBooking.put("firstname", "Susan");
+        mapBooking.put("lastname", "Jackson");
+        mapBooking.put("totalprice", 729);
+        mapBooking.put("depositpaid", true);
+        mapBooking.put("bookingdates", mapBookingDates);
+        mapBooking.put("additionalneeds", "Breakfast");
+        System.out.println(mapBooking.get("bookingdates.checkin"));
+        assertEquals(mapBooking.get("firstname"),jsonToMap.get("firstname"));
+        assertEquals(mapBooking.get("lastname"),jsonToMap.get("lastname"));
+        assertEquals(mapBooking.get("totalprice"),jsonToMap.get("totalprice"));
+        assertEquals(mapBooking.get("depositpaid"),jsonToMap.get("depositpaid"));
+        assertEquals(mapBooking.get("bookingdates.checkin"),jsonToMap.get("bookingdates.checkin"));
+        assertEquals(mapBooking.get("additionalneeds"),jsonToMap.get("additionalneeds"));
+        
+        //How to convert Java Object to json format
+        String javaMapToJson = JsonUtil.convertJavaToJson(jsonToMap);
+        System.out.println(javaMapToJson);
+		
+	}
+
+}

@@ -2,11 +2,11 @@
 <section name="Workbench">
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=techproedspring2020/src&amp;lt;lambda{Lambda14.java[Lambda14&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=techproedspring2020/src&amp;lt;lambda{Lambda14.java[Lambda14&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=techproedsummer2020turkish/src&amp;lt;day29polymorphismexception{Exception02.java[ExceptionTryCatch&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=techproedsummer2020/src&amp;lt;day19encapsulationnt{Main.java[Derived&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=techproedsummer2020/src&amp;lt;day19encapsulationnt{Test01.java[Derived&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=techproedsummer2020/src&amp;lt;day19encapsulationnt{Test02.java[D&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=techproedsummer2020/src&amp;lt;day19encapsulationnt{Test02.java[Day&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=certificationprep/src&amp;lt;questions{Q08.java[C08&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=certificationprep/src&amp;lt;questions{Q13.java[C13&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=certificationprep/src&amp;lt;questions{Q17.java[C17&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=techproedturkish01api/\/Users\/apple\/.m2\/repository\/junit\/junit\/4.11\/junit-4.11.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/junit=/=/maven.artifactId=/junit=/=/maven.version=/4.11=/=/maven.scope=/compile=/&amp;lt;org.junit.runner(JUnitCore.class[JUnitCore&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=techproedturkish01api/\/Users\/apple\/.m2\/repository\/junit\/junit\/4.11\/junit-4.11.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/junit=/=/maven.artifactId=/junit=/=/maven.version=/4.11=/=/maven.scope=/compile=/&amp;lt;junit.textui(TestRunner.class[TestRunner&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
 		<section name="DialogBoundsSettings">
 			<item key="DIALOG_HEIGHT" value="500"/>
 			<item key="DIALOG_WIDTH" value="600"/>
-			<item key="DIALOG_X_ORIGIN" value="980"/>
+			<item key="DIALOG_X_ORIGIN" value="719"/>
 			<item key="DIALOG_Y_ORIGIN" value="311"/>
 			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 		</section>

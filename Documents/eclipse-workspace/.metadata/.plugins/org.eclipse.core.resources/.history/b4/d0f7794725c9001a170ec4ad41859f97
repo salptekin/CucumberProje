@@ -1,0 +1,27 @@
+package day29dequemapsnt;
+
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class D01 {
+	/*
+	 Deque ==> Double Ended Queue
+	 Deque ==> We have FIFO(First In First Out) and LIFO(Last In First Out)
+	 Deque ==> Does not accept "null" as an element
+	 */
+
+	public static void main(String[] args) {
+		
+		Deque<String> dq = new LinkedList<>(); 
+		dq.add("A");//[A]
+		System.out.println(dq);
+		
+		dq.addFirst("B");//[B, A]	
+		System.out.println(dq);
+		
+		dq.addLast("C");//[B, A, C]
+		System.out.println(dq);
+
+	}
+
+}

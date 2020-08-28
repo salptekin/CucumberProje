@@ -1,0 +1,9 @@
+package day29overridingdt;
+
+public class Ovrd01 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

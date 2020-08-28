@@ -1,0 +1,13 @@
+package hazirlikdersi4;
+
+public class Hazirlik4Variables {
+	
+	static int maas;
+	
+	public static void main(String[] args) {
+		
+		System.out.println(maas); //Variable degerini ekrana yazdirmak icin cift tirnak kullanma
+		
+	}
+    
+}

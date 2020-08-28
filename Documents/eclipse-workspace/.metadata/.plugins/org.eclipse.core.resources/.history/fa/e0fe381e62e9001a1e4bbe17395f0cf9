@@ -1,0 +1,33 @@
+package Utilities;
+
+import java.io.IOException;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+
+public class JsonUtil {
+	
+	private static ObjectMapper mapper;
+	
+	static {
+		mapper = new ObjectMapper();
+	}
+	
+	//Java object'ini Json formatina ceviren method ==> Serialization
+	public static String convertJavaToJson(Object object) {
+		String jsonResult = "";
+		
+		try {
+			jsonResult = mapper.writeValueAsString(object);
+		} catch (JsonGenerationException e) {
+			System.out.println("Java Obje'sini Json'a cevirirken exception olustu" + e.getMessage());
+		} catch (JsonMappingException e) {
+			System.out.println("Java Obje'sini Json'a cevirirken exception olustu" + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Java Obje'sini Json'a cevirirken exception olustu" + e.getMessage());
+		}	
+		return jsonResult;
+	}
+
+}

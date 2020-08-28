@@ -1,0 +1,18 @@
+package techproedturkish01.techproedturkish01api;
+
+public class TestObjectMapper {
+
+	public static void main(String[] args) {
+		
+		ObjectMapperEx emp = new ObjectMapperEx();
+		emp.setEmpNo(101);
+		emp.setEmpName("Suleyman Alptekin");
+		emp.setEmpSalary(3500);
+		
+		String jsonEmp = JsonUtil.convertJavaToJson(emp);
+		System.out.println(jsonEmp);
+		
+
+	}
+
+}

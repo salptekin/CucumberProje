@@ -1,0 +1,20 @@
+package day36collectionsmaps;
+
+import java.util.Arrays;
+
+public class Ma02Ornek {
+
+	public static void main(String[] args) {
+		/*
+		 Size verilen bir yazida hangi kelimenin kac kere kullanildigini gosteren kodu yaziniz. 
+		*/
+		
+		String s = "Java ogrenmek zevkliydi. Java ogrenmek kolay ama tekrar gerekiyor. Java tekrar ister.";
+		
+		String kelime[] = s.split(" ");
+		System.out.println(Arrays.toString(kelime));
+		
+
+	}
+
+}

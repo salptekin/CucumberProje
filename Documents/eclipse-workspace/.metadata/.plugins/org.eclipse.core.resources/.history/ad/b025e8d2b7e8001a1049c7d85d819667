@@ -1,0 +1,45 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+import io.restassured.response.Response;
+
+public class ObjectMapperWithPojo extends TestBase {
+	
+	@Test
+	public void jsonToJava() {
+		
+		Response response = given().
+                				spec(spec01).
+                				when(). 
+                				get("/booking/3");
+
+        response.prettyPrint();
+        
+        //How to convert json to POJO class Java Object
+        Booking jsonToBooking = JsonUtil.convertJsonToJava(response.asString(), Booking.class);
+        System.out.println(jsonToBooking);
+        
+        BookingDates bookingDates = new BookingDates("2019-12-05", "2020-06-09");
+        Booking booking = new Booking("Susan", "Ericsson", 142, false, bookingDates, "Breakfast");
+        
+        assertEquals(booking.getFirstname(),jsonToBooking.getFirstname());
+        
+        
+        //How to convert Java Object to json format
+        String javaBookingToJson = JsonUtil.convertJavaToJson(jsonToBooking);
+        System.out.println(javaBookingToJson);
+
+	}
+
+}

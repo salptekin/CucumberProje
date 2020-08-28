@@ -1,0 +1,39 @@
+package day39lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class L03 {
+
+	public static void main(String[] args) {
+		
+		List<String> list = new ArrayList<String>();
+		list.add("Ali");
+		list.add("Mark");
+		list.add("Jackson");
+		list.add("Amanda");
+		list.add("Ali");
+		list.add("Mark");
+		
+		//List elemanlarindan tekrarli olanlari 1 kere yazmak sartiyla ekrana 
+		//alfabetik sirali olarak yazdiriniz
+		list.stream().distinct().sorted().forEach(System.out::println);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

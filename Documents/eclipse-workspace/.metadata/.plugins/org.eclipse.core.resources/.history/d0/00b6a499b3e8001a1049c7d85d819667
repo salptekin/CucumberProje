@@ -1,0 +1,43 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.given;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+import io.restassured.response.Response;
+
+public class ObjectMapperTest extends TestBase {
+	
+	@Test
+	public void jsonToJava() {
+		
+		Response response = given().
+                				spec(spec01).
+                				when(). 
+                				get("/booking/3");
+
+        response.prettyPrint();
+        
+        //How to convert json to POJO class
+        Booking jsonToBooking = JsonUtil.convertJsonToJava(response.asString(), Booking.class);
+        
+        //How to convert json to Map
+        Map<String, Object> jsonToMap = JsonUtil.convertJsonToJava(response.asString(), Map.class);
+        
+       
+        
+        System.out.println(jsonToMap);
+        System.out.println(jsonToBooking);
+       
+		
+
+	}
+
+}

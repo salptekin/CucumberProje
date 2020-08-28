@@ -1,0 +1,8 @@
+package techproedturkish01.techproedturkish01api;
+
+public class PutRequest02 {
+    /*
+     1)spec03 kullanarak herhangi data'yi update ediniz
+     2)Update edildigini status code ve response body ile verify ediniz.
+     */
+}

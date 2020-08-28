@@ -1,0 +1,17 @@
+package techproedturkish01.techproedturkish01api;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Employee emp = new Employee();
+		
+		emp.setEmpNo(201);
+		emp.setName("Suleyman");
+		emp.setSalary(85000);
+		
+		jsonUtil.
+
+	}
+
+}

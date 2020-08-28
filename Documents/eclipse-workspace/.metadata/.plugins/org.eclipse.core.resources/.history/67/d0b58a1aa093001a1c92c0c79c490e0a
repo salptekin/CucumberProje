@@ -1,0 +1,55 @@
+package TechProEd.Spring2020;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+
+import org.junit.Test;
+
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+
+
+public class RestApiGetRequest09 extends BaseTest {
+
+	//How to read local Json File
+	@Test
+	public void readLocalJsonFile() {
+		
+	JsonPath jsonFromLocalFile = new JsonPath(new File("/Users/apple/Desktop/EmployeesFile.json"));
+	//Get all ids into a list
+	List<String> ids01 = jsonFromLocalFile.getList("data.id");
+	System.out.println("All ids: " + ids01);
+	
+	}
+	
+	
+	//How to convert Json to Java object
+	//1) Add GSON dependency from Maven Repository
+	//   GSON: GSON is a converter.GSON is used to convert Json to a Java Object and 
+	//         to convert an Java Object to Json. 
+	//Note 1: The process of converting from JSON to JAVA OBJECT is called "DE-SERIALIZATION"
+	//Note 2: The process of converting from JAVA OBJECT to JSON is called "SERIALIZATION"
+	
+	@Test
+	public void convertJsonFileToHashMap() {
+
+	Response response = given().
+			                spec(spec02).
+                            accept(ContentType.JSON).	
+                        when().
+                            get();
+	response.prettyPrint();
+	
+	//To convert JSON to a JAVA OBJECT use as() method.(DE-SERIALIZATION)
+	//You will need to import HashMap class
+	HashMap<String, String> map = response.as(HashMap.class);
+	System.out.println(map);
+	System.out.println(map.keySet());
+	
+	}
+	
+}

@@ -1,0 +1,37 @@
+package techproedturkish01.techproedturkish01api;
+
+import Utilities.JsonUtil;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+//		Employee emp = new Employee();
+//		
+//		emp.setEmpNo(201);
+//		emp.setName("Suleyman");
+//		emp.setSalary(85000);
+//		
+//		String jsonEmployee = JsonUtil.convertJavaToJson(emp);
+//		
+//		System.out.println(jsonEmployee);
+		
+		BookingDates bookingDates = new BookingDates();
+		bookingDates.setCheckin("2020-03-03");
+		bookingDates.setCheckout("2020-03-09");
+		
+		Booking booking = new Booking();
+		booking.setFirstname("Suleyman");
+		booking.setLastname("Alptekin");
+		booking.setTotalprice(333);
+		booking.setDepositpaid(true);
+		booking.setBookingdates(bookingDates);
+		booking.setAdditionalneeds("Wifi");
+		
+		String jsonBooking = JsonUtil.convertJavaToJson(booking);
+		
+		System.out.println(jsonBooking);
+
+	}
+
+}

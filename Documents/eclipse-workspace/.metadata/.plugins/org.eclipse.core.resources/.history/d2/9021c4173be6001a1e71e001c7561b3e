@@ -1,0 +1,52 @@
+package day36collectionsmaps;
+
+import java.util.HashMap;
+
+public class Map01 {
+
+	public static void main(String[] args) {
+		
+		/*
+		 1)HashMap'ler rastgele siralama yapar
+		 2)Map'lerde "key" degerleri "unique" olmak zorundadir, "value" kismi tekrarli olabilir.
+		 */
+		
+		HashMap<Integer, String> hm01 = new HashMap<>();
+		hm01.put(100, "Ali");
+		hm01.put(101, "Emine");
+		hm01.put(102, "Veli");
+		hm01.put(103, "Ayse");
+		
+		//Ayni key degeri ile ikinci defa "put()" kullanirsaniz ustune yazar
+		hm01.put(102, "XXXX");
+		
+		//Ayni value ama key farkli ise ekleme yapar, ayni value tekrarli olarak kullanilabilir
+		hm01.put(104,"XXXX");
+		
+		//"key" null kabul eder mi? Cevap: Kabul eder ama sadece 1 tane null kabul eder, Ikinci defa null 
+		//"key" kullanirsaniz ustune yazar
+		hm01.put(null, "YYYY");
+		hm01.put(null, "ZZZZ");
+		
+		//HashMap value olarak "null" kabul eder mi?
+		hm01.put(105, null);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		System.out.println(hm01);
+
+	}
+
+}

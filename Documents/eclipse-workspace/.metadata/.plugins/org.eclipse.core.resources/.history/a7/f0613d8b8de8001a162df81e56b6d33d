@@ -1,0 +1,34 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.*;
+
+import org.json.JSONObject;
+import org.junit.Test;
+
+import io.restassured.response.Response;
+
+public class PatchRequest01 extends TestBase {
+	
+	@Test
+	public void patch01() {
+		
+		Response responseBeforePatch = given().
+				                         spec(spec03).
+				                       when().
+				                         get("/200");
+		
+		responseBeforePatch.prettyPrint();
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("title", "Suleyman Alptekin");
+		
+		Response responseAfterPatch = given().
+				                         spec(spec03).
+				                         body(jsonObject).
+				                      when().
+				                         patch("/200");
+		responseAfterPatch.prettyPrint();
+				
+	}
+
+}

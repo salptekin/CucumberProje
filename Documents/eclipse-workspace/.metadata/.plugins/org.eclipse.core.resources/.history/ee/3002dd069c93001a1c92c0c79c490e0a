@@ -1,0 +1,25 @@
+package TechProEd.Spring2020;
+
+import java.io.File;
+import java.util.List;
+
+import org.junit.Test;
+
+import io.restassured.path.json.JsonPath;
+
+
+public class RestApiGetRequest09 {
+
+	@Test
+	public void readLocalJsonFile() {
+	//How to use local Json File
+	JsonPath jsonFromLocalFile = new JsonPath(new File("/Desktop/EmployeesFile.json"));
+	//Get all ids into a list
+	List<String> ids01 = jsonFromLocalFile.getList("data.id");
+	System.out.println("All ids: " + ids01);
+	}
+	
+	
+	//How to modify Json data by using local Json File
+	
+}

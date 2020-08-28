@@ -1,0 +1,21 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.*;
+import org.junit.Test;
+
+import io.restassured.response.Response;
+
+public class PatchRequest01 extends TestBase {
+	
+	@Test
+	public void patch01() {
+		
+		Response response = given().
+				               spec(spec03).
+				            when().
+				               get("/200");
+		response.prettyPrint();
+				
+	}
+
+}

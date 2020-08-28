@@ -1,0 +1,35 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.given;
+
+import java.util.Map;
+
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+import io.restassured.response.Response;
+
+public class ObjectMapperWithMap extends TestBase {
+	
+
+	@Test
+	public void jsonToJava() {
+		
+		Response response = given().
+                				spec(spec01).
+                				when(). 
+                				get("/booking/3");
+
+        response.prettyPrint();
+ 
+        //How to convert json to Map
+        Map<String, Object> jsonToMap = JsonUtil.convertJsonToJava(response.asString(), Map.class);
+        System.out.println(jsonToMap);
+        
+        //How to convert Java Object to json format
+        String javaMapToJson = JsonUtil.convertJavaToJson(jsonToMap);
+        System.out.println(javaMapToJson);
+		
+	}
+
+}

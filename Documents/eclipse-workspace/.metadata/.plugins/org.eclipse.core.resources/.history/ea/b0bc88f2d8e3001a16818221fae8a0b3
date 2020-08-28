@@ -1,0 +1,32 @@
+package techproedturkish01.techproedturkish01api;
+
+import org.junit.Test;
+
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+
+import java.util.HashMap;
+
+public class GetRequest11 extends TestBase {
+	
+	/*
+	 GSON: GSON, 1) Json formatindaki data'lari Java Objectlerine donusturur. (De-Serialization) 
+	             2) Java Object'lerini Json formatindaki data'lara donusturur.(Serialization)
+	             
+	 Note: GSON ile ayni isi yapan ObjectMapper Class'da var
+	*/
+	
+	@Test
+	public void get01() {
+		Response response = given().
+				               spec(spec03).
+				            when(). 
+				               get("/2");
+		response.prettyPrint();
+		
+		HashMap<String, String> map = response.as(HashMap.class);//De-Serialization 
+		System.out.println(map);
+	}
+
+}

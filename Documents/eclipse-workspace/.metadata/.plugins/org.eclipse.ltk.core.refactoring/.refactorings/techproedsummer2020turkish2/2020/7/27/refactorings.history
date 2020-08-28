@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;day14methodcreation.MC01&apos; to &apos;Mc01&apos;&#x0A;- Original project: &apos;techproedsummer2020turkish2&apos;&#x0A;- Original element: &apos;day14methodcreation.MC01&apos;&#x0A;- Renamed element: &apos;day14methodcreation.Mc01&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MC01&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;day14methodcreation{MC01.java[MC01" matchStrategy="1" name="Mc01" qualified="false" references="true" similarDeclarations="false" stamp="1593799958305" textual="false" version="1.0"/>
+</session>

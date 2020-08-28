@@ -1,0 +1,10 @@
+package techproedturkish01.techproedturkish01api;
+
+public class TestObjectMapper {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

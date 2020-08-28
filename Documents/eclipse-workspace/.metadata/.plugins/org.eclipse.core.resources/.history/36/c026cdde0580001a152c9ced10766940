@@ -1,0 +1,17 @@
+package hazirlikdersi4;
+
+public class Hazirlik4Variables {
+	
+	static int maas=100000;
+	static char tekHarf;
+	
+	public static void main(String[] args) {
+		
+		System.out.println(maas); //Variable degerini ekrana yazdirmak icin cift tirnak kullanma
+		                          //Herhangi bir deger atamasi yapmadigim halde, ekrana 0 yazildi. Default value
+		
+		System.out.println(tekHarf); // char'larin default value'su space oldugu icin ekranda birsey gozukmez
+		
+	}
+    
+}

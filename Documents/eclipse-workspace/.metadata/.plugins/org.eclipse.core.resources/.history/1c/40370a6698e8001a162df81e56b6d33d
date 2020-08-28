@@ -1,0 +1,21 @@
+package day39lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class L01 {
+
+	public static void main(String[] args) {
+		
+		List<String> list = new ArrayList<>();
+		list.add("Ali");
+		list.add("Can");
+		list.add("Kemal");
+		list.add("Mucella");
+		list.add("Ayse");
+		list.add("Emine");
+		System.out.println(list);
+
+	}
+
+}

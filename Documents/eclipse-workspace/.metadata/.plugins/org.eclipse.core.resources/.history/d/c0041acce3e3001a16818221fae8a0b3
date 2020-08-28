@@ -1,0 +1,24 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.*;
+import java.util.ArrayList; 
+import java.util.List;
+import java.util.Map;
+import org.junit.Test;
+import org.testng.asserts.SoftAssert;
+import io.restassured.response.Response;
+
+public class GetRequest13 extends TestBase {
+
+	@Test
+	public void get01() {
+		
+		Response response = given().
+	                          spec(spec02).
+	                        when(). 
+	                          get();
+		
+        response.prettyPrint();
+        
+	}
+}

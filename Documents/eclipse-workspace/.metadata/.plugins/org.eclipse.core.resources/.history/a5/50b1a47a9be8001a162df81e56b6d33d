@@ -1,0 +1,90 @@
+package day39lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class L01 {
+	
+	/*
+	 Lambda = Functional Programming
+	 Normal Java = Structured Programming
+	 */
+
+	public static void main(String[] args) {
+		
+		List<String> list = new ArrayList<>();
+		list.add("Ali");
+		list.add("Can");
+		list.add("Kemal");
+		list.add("Mucella");
+		list.add("Ayse");
+		list.add("Emine");
+		System.out.println(list);
+		
+		//list'in tum elemanlarini ekrana yazdiriniz
+		
+			//1. Yol: Structured Programming
+			for(String w : list) {
+				System.out.print(w + " ");
+			}			
+			System.out.println();			
+			//2. Yol: Functional Programming
+			list.
+			   stream().
+			   forEach(t->System.out.print(t + " "));//t->System.out.print(t + " ") ==> Lambda Expression 
+		
+	   //list'in icindeki harf sayisi 5'den az olanlarini yazdiriniz	
+			System.out.println();
+			
+			//1. Yol: Structured Programming
+			for(String w : list) {
+				if(w.length()<5) {
+					System.out.print(w + " ");
+				}
+			}
+			
+			System.out.println();
+			
+			//2. Yol: Functional Programming
+		    list.
+		       stream().
+		       filter(t->t.length()<5).
+		       forEach(t->System.out.print(t + " "));
+		    
+		    System.out.println();
+		    
+		//list'in icindeki son harfi 'e' olanlari ekrana yazdiriniz olanlarini yazdiriniz	    
+		    list.
+		       stream().
+		       filter(t->t.endsWith("e")).
+		       forEach(t->System.out.print(t + " "));
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

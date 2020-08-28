@@ -1,0 +1,29 @@
+package day36collectionsmaps;
+
+import java.util.HashMap;
+
+public class Map01 {
+
+	public static void main(String[] args) {
+		
+		/*
+		 1)HashMap'ler rastgele siralama yapar
+		 */
+		
+		HashMap<Integer, String> hm01 = new HashMap<>();
+		hm01.put(100, "Ali");
+		hm01.put(101, "Emine");
+		hm01.put(102, "Veli");
+		hm01.put(103, "Ayse");
+		
+		//Ayni key degeri ile ikinci defa "put()" kullanirsaniz ustune yazar
+		hm01.put(102, "XXXX");
+		
+		//Ayni value ama key farkli
+		hm01.put(104,"XXXX");
+		
+		System.out.println(hm01);
+
+	}
+
+}

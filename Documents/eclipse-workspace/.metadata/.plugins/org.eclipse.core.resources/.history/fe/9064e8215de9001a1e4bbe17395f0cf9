@@ -1,0 +1,22 @@
+package techproedturkish01.techproedturkish01api;
+
+import java.util.HashMap;
+
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+
+public class ObjectMapperTestWithMap {
+
+	@Test
+	public void javaToJson() {
+		HashMap<Integer, String> map = new HashMap<>();
+		map.put(101, "Ali");
+		map.put(102, "Can");
+		map.put(103, "Remziye");
+		System.out.println(map);//{101=Ali, 102=Can, 103=Remziye}
+		
+		String jsonFromMap = JsonUtil.convertJavaToJson(map);
+		System.out.println(jsonFromMap);
+	}
+}

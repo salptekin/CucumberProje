@@ -1,0 +1,27 @@
+package techproedturkish01.techproedturkish01api;
+
+import org.junit.Test;
+import org.testng.asserts.SoftAssert;
+import io.restassured.response.Response;
+import static io.restassured.RestAssured.*;
+
+public class GetRequest12 extends TestBase {
+
+	/*
+	 GSON: GSON, 1) Json formatindaki data'lari Java Objectlerine donusturur. (De-Serialization) 
+	             2) Java Object'lerini Json formatindaki data'lara donusturur.(Serialization)
+	             
+	 Note: GSON ile ayni isi yapan ObjectMapper Class'da var
+	*/
+	
+	@Test
+	public void get01() {
+		
+		Response response = given().
+	               spec(spec03).
+	            when(). 
+	               get("/3");
+		
+        response.prettyPrint();
+	}
+}

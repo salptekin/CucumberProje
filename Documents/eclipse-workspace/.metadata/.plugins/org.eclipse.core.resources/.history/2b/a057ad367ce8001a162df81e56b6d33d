@@ -1,0 +1,37 @@
+package techproedenglish01.techproedenglish01api;
+
+import org.junit.Test;
+
+import io.restassured.response.Response;
+import static io.restassured.RestAssured.*;
+
+public class GetRequest01 {
+	
+	@Test
+	public void getMethod01() {
+		
+		Response response = given().when().get("https://restful-booker.herokuapp.com/booking");
+		
+		//To see response body on the console use prettyPrint() method
+		response.prettyPrint();
+		//To see status code on the console use getStatusCode() or statusCode()
+		System.out.println(response.getStatusCode());//200
+		
+		response.then().assertThat().statusCode(201);
+		
+		
+		
+	}
+	
+	@Test
+	public void getMethod02() {
+		
+		Response response = given().when().get("https://restful-booker.herokuapp.com/booking/3");
+		
+		System.out.println(response.statusCode());
+		
+		response.prettyPrint();
+		
+	}
+
+}

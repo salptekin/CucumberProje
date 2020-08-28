@@ -1,0 +1,27 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.given;
+
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+import io.restassured.response.Response;
+
+public class ObjectMapperTest extends TestBase {
+	
+	@Test
+	public void jsonToJava() {
+		
+		Response response = given().
+                spec(spec01).
+                when(). 
+                get();
+
+        response.prettyPrint();
+        
+        Booking jsonToBooking = JsonUtil.convertJsonToJava(response.asString(), Booking.class);
+		
+
+	}
+
+}

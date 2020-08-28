@@ -1,0 +1,19 @@
+package techproedenglish01.techproedenglish01api;
+
+import org.junit.Test;
+
+import io.restassured.response.Response;
+import static io.restassured.RestAssured.*;
+
+public class GetRequest01 {
+	
+	@Test
+	public void getMethod01() {
+		
+		Response response = given().when().get("https://restful-booker.herokuapp.com/booking");
+		response.prettyPrint();
+		
+		System.out.println(response.getStatusCode());//200
+	}
+
+}

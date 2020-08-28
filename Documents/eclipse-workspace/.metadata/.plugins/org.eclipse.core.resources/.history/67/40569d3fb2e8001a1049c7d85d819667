@@ -1,0 +1,36 @@
+package techproedturkish01.techproedturkish01api;
+
+import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+import io.restassured.response.Response;
+
+public class ObjectMapperTest extends TestBase {
+	
+	@Test
+	public void jsonToJava() {
+		
+		Response response = given().
+                				spec(spec01).
+                				when(). 
+                				get("/booking/3");
+
+        response.prettyPrint();
+        
+        Booking jsonToBooking = JsonUtil.convertJsonToJava(response.asString(), Booking.class);
+        
+        
+       
+        response.then().assertThat().statusCode(200);
+        
+        ObjectMapper mapper = new ObjectMapper();
+       
+		
+
+	}
+
+}

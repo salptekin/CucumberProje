@@ -1,0 +1,28 @@
+package techproedturkish01.techproedturkish01api;
+
+import org.junit.Test;
+import Utilities.JsonUtil;
+
+public class ObjectMapperTest {
+	
+	@Test
+	public void javaToJson() {
+		
+		BookingDates bookingDates = new BookingDates();
+		bookingDates.setCheckin("2020-03-03");
+		bookingDates.setCheckout("2020-03-09");
+		
+		Booking booking = new Booking();
+		booking.setFirstname("Suleyman");
+		booking.setLastname("Alptekin");
+		booking.setTotalprice(333);
+		booking.setDepositpaid(true);
+		booking.setBookingdates(bookingDates);
+		booking.setAdditionalneeds("Wifi");
+		
+		String jsonBooking = JsonUtil.convertJavaToJson(booking);
+		
+		System.out.println(jsonBooking);
+	}
+
+}

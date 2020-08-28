@@ -1,0 +1,19 @@
+package techproedturkish01.techproedturkish01api;
+
+import org.junit.Test;
+
+import Utilities.JsonUtil;
+
+public class ObjectMapperTestWithPojo {
+	
+	@Test
+	public void javaToJson() {
+		
+		BookingDates bookingDates = new BookingDates("2020-11-03", "2020-11-08");
+		System.out.println(bookingDates);
+		
+		String jsonFromPojo = JsonUtil.convertJavaToJson(bookingDates);
+		System.out.println(jsonFromPojo);
+	}
+
+}

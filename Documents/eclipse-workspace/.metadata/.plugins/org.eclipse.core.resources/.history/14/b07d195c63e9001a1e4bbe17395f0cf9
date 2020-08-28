@@ -1,0 +1,69 @@
+package techproedturkish01.techproedturkish01api;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+import Utilities.JsonUtil;
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+
+public class ObjectMapperTestWithMap extends TestBase {
+
+	@Test
+	public void javaToJson() {
+		HashMap<Integer, String> map = new HashMap<>();
+		map.put(101, "Ali");
+		map.put(102, "Can");
+		map.put(103, "Remziye");
+		System.out.println(map);//{101=Ali, 102=Can, 103=Remziye}
+		
+		//map Java object'ini json formata cevirdik ==> Serialization
+		String jsonFromMap = JsonUtil.convertJavaToJson(map);
+		System.out.println(jsonFromMap);//{"101":"Ali","102":"Can","103":"Remziye"}
+	}
+	
+	@Test
+	public void jsonToJava() {
+		
+		Response response = given().
+				               spec(spec01).
+				            when().
+				               get("/booking/3");
+		response.prettyPrint();
+		
+		Map<String,Object> jsonToMap = JsonUtil.convertJsonToJava(response.asString(), Map.class);
+		System.out.println(jsonToMap);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

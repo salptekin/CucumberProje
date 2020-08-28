@@ -1,0 +1,23 @@
+package day37maps;
+
+import java.util.Hashtable;
+
+public class Ht01 {
+
+	public static void main(String[] args) {
+		
+		Hashtable<Integer, String> ht = new Hashtable<>();
+		ht.put(100, "Ali");
+		ht.put(101, "Veli");
+		ht.put(102, "Aylin");
+		ht.put(103, "Emine");
+		
+		ht.put(null, "Ramazan");//HashTable'da key icin 'null' kullanilamaz.
+		                        //Key icin null kullanirsaniz 'NullPointerException' alirsiniz.
+		
+		ht.put(104, null);
+		System.out.println(ht);
+
+	}
+
+}

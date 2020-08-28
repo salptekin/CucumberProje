@@ -1,0 +1,36 @@
+package techproedturkish01.techproedturkish01api;
+
+import org.junit.Test;
+
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+
+public class Delete01 extends TestBase {
+
+	@Test
+	public void delete01() {
+		
+		Response responseBeforeDelete = given().
+										  auth().
+										  basic("admin", "password123").
+				                          spec(spec01).
+				                        when().
+				                          get("/booking/3");
+		responseBeforeDelete.prettyPrint();
+		
+		Response responseAfterDelete = given().
+				                          spec(spec01).
+				                       when().
+				                          delete("/booking/3");
+		responseAfterDelete.prettyPrint();
+		
+		Response getResponseAfterDelete = given().
+                                             spec(spec01).
+                                             when().
+                                             get("/booking/3");
+		getResponseAfterDelete.prettyPrint();
+		
+	}
+	
+}

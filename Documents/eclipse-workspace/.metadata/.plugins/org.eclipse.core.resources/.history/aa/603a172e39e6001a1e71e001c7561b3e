@@ -1,0 +1,16 @@
+package day36collectionsmaps;
+
+import java.util.HashMap;
+
+public class Map01 {
+
+	public static void main(String[] args) {
+		
+		HashMap<Integer, String> hm01 = new HashMap<>();
+		hm01.put(100, "Ali");
+		
+		System.out.println(hm01);
+
+	}
+
+}

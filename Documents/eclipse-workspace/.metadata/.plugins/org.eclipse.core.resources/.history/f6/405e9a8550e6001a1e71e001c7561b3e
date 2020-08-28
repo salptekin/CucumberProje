@@ -1,0 +1,11 @@
+package SeleniumGridTest;
+
+public class ChromeGridTest {
+
+	public static void main(String[] args) {
+		
+		DesiredCapabilities cap = new DesiredCapabilities();
+
+	}
+
+}

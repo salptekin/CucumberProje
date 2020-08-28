@@ -17,7 +17,7 @@ public class GetRequest07 extends TestBase {
 	public void get01() {
 		Response response = given().
 				               spec(spec01).
-				               get("/booking?firstname=Susan&depositpaid=true");
+				               get("/booking?firstname=Susan&depositpaid=true");//Iyi degil
 		response.prettyPrint();
 		
 		assertTrue(response.getBody().asString().contains("bookingid"));	
@@ -27,7 +27,7 @@ public class GetRequest07 extends TestBase {
 	public void get02() {
 		
 		spec01.queryParams("firstname", "Susan",
-				           "depositpaid", true);
+				           "depositpaid", true);//Iyi
 
 		
 		Response response = given().
