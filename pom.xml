@@ -62,7 +62,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
+                        <include>**/runners/*EbayRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
