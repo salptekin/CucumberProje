@@ -18,7 +18,7 @@ public class Hooks {
     }
 
     // TestNG'deki @AfterMethod gibi çalışır.
-    // Her senaryodan sonra çalışır.
+	// Her senaryodan sonra çalışır.
     @After
     public void tearDown(Scenario scenario){
         System.out.println("tearDown çalıştı.");
@@ -29,7 +29,7 @@ public class Hooks {
         // eğer senaryonun sonucu FAILED ise(başarısızsa) ekran görüntüsünü rapora ekleyebilirsin.
         if(scenario.isFailed()){
             scenario.embed(screenshot , "image/png");
-        }
+         }
 
        Driver.closeDriver();
 

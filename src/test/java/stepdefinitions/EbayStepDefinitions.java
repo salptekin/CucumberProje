@@ -2,6 +2,8 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import junit.framework.Assert;
+
 import org.openqa.selenium.Keys;
 import pages.EbayPage;
 import utilities.Driver;
@@ -20,10 +22,13 @@ public class EbayStepDefinitions {
         ebayPage.aramaKutusu.sendKeys(string + Keys.ENTER );
     }
 
-    @Then("kullanici ebaydaki sonuc sayisini ekrana yazar")
-    public void kullanici_ebaydaki_sonuc_sayisini_ekrana_yazar() {
+    @Then("kullanici ebaydaki sonuc sayisini ekrana yazar {string}")
+    public void kullanici_ebaydaki_sonuc_sayisini_ekrana_yazar(String string) {
         String sonucSayisi = ebayPage.sonucSayisi.getText();
         System.out.println(sonucSayisi);
+        if(string.equals("araba")) {
+           Assert.assertTrue(false);
+        }
     }
 
 
