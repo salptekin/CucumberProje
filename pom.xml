@@ -95,7 +95,7 @@
 				<version>5.0.0</version>
 				<executions>
 					<execution>
-						<id>execution</id>
+						<id>EbayRunner</id>
 						<phase>verify</phase>
 						<goals>
 							<goal>generate</goal>
