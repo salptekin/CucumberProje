@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -48,8 +49,11 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
-
-
+        <dependency>				
+             <groupId>junit</groupId>								
+             <artifactId>junit</artifactId>								
+             <version>3.8.1</version>																
+        </dependency>	
     </dependencies>
 
     <build>
@@ -118,7 +122,7 @@
                     <source>1.7</source>
                     <target>1.7</target>
                     <fork>true</fork>
-                    <executable>C:\Program Files\Java\jdk-14\bin\javac</executable>
+                    <executable>/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home</executable>
                 </configuration>
             </plugin>
         </plugins>
