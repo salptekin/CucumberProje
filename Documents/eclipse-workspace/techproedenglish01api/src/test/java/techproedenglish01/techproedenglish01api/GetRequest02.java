@@ -71,9 +71,11 @@ public class GetRequest02 {
 		
 		response.then().assertThat().statusCode(404);
 		
+		assertFalse(response.asString().contains("Suleyman"));
+		
 		assertTrue(response.asString().contains("Not FoundXXXX"));
 		
-		assertFalse(response.asString().contains("Suleyman"));
+		
 	}
 	
 	
