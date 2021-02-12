@@ -3,6 +3,7 @@ package com.techproed.apiToDeploy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -25,8 +26,15 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		
 		http.
+			csrf().disable().
 			authorizeRequests().
 			antMatchers("/", "index", "/css/*", "/js/*").permitAll().
+			antMatchers("/api/**").hasRole(ApplicationUserRoles.STUDENT.name()).//Role-Based Auth
+			antMatchers(HttpMethod.POST, "/management/api/**").hasAuthority(ApplicationUserPermissions.TEACHER_WRITE.name()).
+			antMatchers(HttpMethod.PUT, "/management/api/**").hasAuthority(ApplicationUserPermissions.TEACHER_WRITE.name()).
+			antMatchers(HttpMethod.DELETE, "/management/api/**").hasAuthority(ApplicationUserPermissions.TEACHER_WRITE.name()).
+			antMatchers(HttpMethod.PATCH, "/management/api/**").hasAuthority(ApplicationUserPermissions.TEACHER_WRITE.name()).
+			antMatchers(HttpMethod.GET, "/management/api/**").hasRole(ApplicationUserRoles.TEACHER.name()).
 			anyRequest().
 			authenticated().
 			and().
@@ -42,12 +50,47 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter{
 									builder().
 									username("salptekin").
 									password(passwordEncoder.passwordEncoder().encode("password12")).
-									roles("STUDENT").
+									//roles(ApplicationUserRoles.STUDENT.name()).
+									authorities(ApplicationUserRoles.STUDENT.getGrantedAuthorities()).//Permission-Based Auth
 									build();
 		
-		return new InMemoryUserDetailsManager(suleyman);
+		UserDetails teacher = User.
+									builder().
+									username("teacher").
+									password(passwordEncoder.passwordEncoder().encode("password1234")).
+									//roles(ApplicationUserRoles.TEACHER.name()).
+									authorities(ApplicationUserRoles.TEACHER.getGrantedAuthorities()).//Permission-Based Auth
+									build();
+		
+		return new InMemoryUserDetailsManager(suleyman, teacher);
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
